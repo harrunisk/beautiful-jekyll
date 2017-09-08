@@ -47,7 +47,20 @@ sudo apt-get install python2.7-dev python3.5-dev
 Bu başlıkları ve kütüphaneleri kurmadığınız taktirde 4.adımda  `cmake`  Python derleyicileri ve kütüphaneleri için otomatik olarak uygun değerleri atayamayacak.
 ## Adım-2:OpenCv Kaynak Kodu İndir:
 
-Bu çalışmada OpenCv'nin  3.1.0  versiyonunu kullanacağız. İhtiyacınıza göre olan versiyonu [buradan](https://github.com/opencv/opencv) indirip kurabilirsiniz.Zip olarak indirip arşivden aşağıdaki komutlarla çıkaracağız:
+Bu çalışmada OpenCv'nin  3.1.0  versiyonunu kullanacağız. İhtiyacınıza göre olan versiyonu [buradan](https://github.com/opencv/opencv) indirip kurabilirsiniz. Zip olarak indirip arşivden aşağıdaki komutlarla çıkaracağız:
+~~~
+cd ~
+wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip opencv.zip
+~~~
+Sadece OpenCv indirmek yeterli olmayacak. Biz 2.4 OpenCv versiyonunda  bulunan daha sonra geliştirme ve patent gerekçeleri ile OpenCV 3+ içinde bulunmayan SIFT ve SURF modüllerini de kullanmak istiyoruz. Bu yüzden contrib dosyalarına ihtiyacımız olacak. SIFT ve SURF modülleri hakkında daha fazla bilgiye [buradan](http://www.pyimagesearch.com/2015/07/16/where-did-sift-and-surf-go-in-opencv-3/) ulaşabilirsiniz.Yüklemeye contrib ile devam ediyoruz:
+~~~
+wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip
+unzip opencv_contrib.zip
+~~~
+Burada derleme hataları almamak için dikkat edilmesi gereken nokta  **opencv**  ve  **opencv_contrib**  versiyonlarının aynı olması.  
+## Adım-3:Python 2.7 yada Python 3.5 Gereksinimlerinin Kurulması
+
 Here's a useless table:
 
 | Number | Next number | Previous number |
