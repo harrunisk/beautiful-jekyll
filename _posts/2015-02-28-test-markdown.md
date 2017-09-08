@@ -1,10 +1,12 @@
 ---
 layout: post
-title: OpenCv Kurulumu
-subtitle: Ubuntu 16.04'de OpenCv
+title: Ubuntu 16.04'de OpenCv Kurulumu
+subtitle: Adım Adım Kurulum
 ---
 
-You can write regular [markdown](http://markdowntutorial.com/) here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to [take 5 minutes to learn how to write in markdown](http://markdowntutorial.com/) - it'll teach you how to transform regular text into bold/italics/headings/tables/etc.
+Yazıya başlamadan önce Python 2.7 ve Python 3.5.2 Ubuntu 16.04 içinde hazır olarak kurulu olduğunu belirteyim.  
+Python 2.7.12'e konsoldan *_Python_* komutunu kullanarak ulaşabilirsiniz.
+Python 3.5.2'e konstaldan *_Python3_* komutunu kullanarak ulaşabilirsiniz.
 
 **Here is some bold text**
 
