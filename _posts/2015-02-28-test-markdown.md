@@ -5,8 +5,8 @@ subtitle: Adım Adım Kurulum
 ---
 
 Yazıya başlamadan önce Python 2.7 ve Python 3.5.2 Ubuntu 16.04 içinde hazır olarak kurulu olduğunu belirteyim.  
-Python 2.7.12'e konsoldan *_Python_* komutunu kullanarak ulaşabilirsiniz.  
-Python 3.5.2'e konstaldan *_Python3_* komutunu kullanarak ulaşabilirsiniz.  
+Python 2.7.12'e konsoldan _*Python*_ komutunu kullanarak ulaşabilirsiniz.  
+Python 3.5.2'e konstaldan _*Python3*_ komutunu kullanarak ulaşabilirsiniz.  
 
 **Here is some bold text**
 
