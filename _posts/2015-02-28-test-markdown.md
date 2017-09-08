@@ -16,6 +16,10 @@ Tüm adımlarda konsol kullanacağımız için Ubuntu konsolu açıp öncelikle 
 sudo apt-get update 
 sudo apt-get upgrade
 ~~~
+```linux
+sudo apt-get update 
+sudo apt-get upgrade
+```
 
 Here's a useless table:
 
