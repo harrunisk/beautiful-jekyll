@@ -16,10 +16,12 @@ Tüm adımlarda konsol kullanacağımız için Ubuntu konsolu açıp öncelikle 
 sudo apt-get update 
 sudo apt-get upgrade
 ~~~
-```linux
-sudo apt-get update 
-sudo apt-get upgrade
-```
+Bazı geliştirme araçlarını kuralım:
+~~~
+sudo apt-get install build-essential cmake pkg-config
+~~~
+
+
 
 Here's a useless table:
 
