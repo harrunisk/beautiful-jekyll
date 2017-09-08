@@ -30,8 +30,12 @@ sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev 
 sudo apt-get install libxvidcore-dev libx264-dev
 ~~~
+OpenCv kısıtlı sayıda GUI(Graphical User Interface) aracı ile geliyor. Bunlardan bazıları ekranımızda bir resmi görüntülemeye yarayan (`cv2.imshow`),  tuş basışlarını beklemek için (`cv2.waitkey`), fare hareketlerini kaydetmek için (`cv2.setMouseCallback`) ve diğer kaydırma butonu gibi basit GUI elemanları. OpenCv ile çok kapsamlı GUI uygulamaları yapmayı beklemeyin sadece basit uygulamalar ve kodumuzu debug etmek için kullanacağız.  
 
-
+OpenCv'nin GUI işlerini halleden modül (`highgui`) GTK  kütüphanesine dayanır, bu kütüphaneyi aşağıdaki komut ile kuracağız:
+~~~
+sudo apt-get install libgtk-3-dev
+~~~
 Here's a useless table:
 
 | Number | Next number | Previous number |
