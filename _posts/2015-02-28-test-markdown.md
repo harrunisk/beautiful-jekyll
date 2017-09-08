@@ -21,10 +21,15 @@ Bazı geliştirme araçlarını kuralım:
 sudo apt-get install build-essential cmake pkg-config
 ~~~
 `pkg-config`  sisteminizde muhtemelen kuruludur ama  `apt-get`  komutu eklendiğinden emin olun. `cmake`  OpenCv'i otomatik olarak derlerken kullanacağız. 
+OpenCv görüntü işleme ve bilgisayar görmesi işlemlerinde kullanılan bir kütüphane. OpenCv' nin JPEG, PNG, TIFF, vb bir sürü resim formatını deskteklemesi gerekiyor.  OpenCv yükleme ve çözme işlerini kolaylaştırması için diğer I/O kütüphanelerini kullanır.Gerekli olanları kuracağız:
 ~~~
 sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
 ~~~
-OpenCv görüntü işleme ve bilgisayar görmesi işlemlerinde kullanılan bir kütüphane. OpenCv' nin JPEG, PNG, TIFF, vb bir sürü resim formatını deskteklemesi gerekiyor.  OpenCv yükleme ve çözme işlerini kolaylaştırması için diğer I/O kütüphanelerini kullanır.Gerekli olanları kuracağız:
+Şu an resimleri yüklemek için gerekli olan kütüphaneleri yükledik. Video ve kameradan gelen veri akışları için kütüphaneleri yükleyelim:
+~~~
+sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev 
+sudo apt-get install libxvidcore-dev libx264-dev
+~~~
 
 
 Here's a useless table:
