@@ -36,6 +36,16 @@ OpenCv'nin GUI işlerini halleden modül (`highgui`) GTK  kütüphanesine dayan�
 ~~~
 sudo apt-get install libgtk-3-dev
 ~~~
+Daha sonra OpenCv içinde değişik fonksiyonları (matris işlemleri vb.) optimize eden kütüphaneleri kuracağız:  
+~~~
+sudo apt-get install libatlas-base-dev gfortran
+~~~
+İlk adımı her iki Python sürümünün geliştirme başlıklarını ve kütüphanelerini kurarak bitireceğiz:
+~~~
+sudo apt-get install python2.7-dev python3.5-dev
+~~~
+Bu başlıkları ve kütüphaneleri kurmadığınız taktirde 4.adımda  `cmake`  Python derleyicileri ve kütüphaneleri için otomatik olarak uygun değerleri atayamayacak.
+## Adım-2:OpenCv Kaynak Kodu İndir
 Here's a useless table:
 
 | Number | Next number | Previous number |
