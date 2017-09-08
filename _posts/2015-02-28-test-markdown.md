@@ -20,7 +20,7 @@ Bazı geliştirme araçlarını kuralım:
 ~~~
 sudo apt-get install build-essential cmake pkg-config
 ~~~
-**pkg-config**  sisteminizde muhtemelen kuruludur ama  **apt-get**  komutu eklendiğinden emin olun. **cmake**  OpenCv'i otomatik olarak derlerken kullanacağız. 
+`pkg-config`  sisteminizde muhtemelen kuruludur ama  `apt-get`  komutu eklendiğinden emin olun. `cmake`  OpenCv'i otomatik olarak derlerken kullanacağız. 
 ~~~
 sudo apt-get install libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
 ~~~
