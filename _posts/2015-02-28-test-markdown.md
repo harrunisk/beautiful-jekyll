@@ -45,7 +45,9 @@ sudo apt-get install libatlas-base-dev gfortran
 sudo apt-get install python2.7-dev python3.5-dev
 ~~~
 Bu başlıkları ve kütüphaneleri kurmadığınız taktirde 4.adımda  `cmake`  Python derleyicileri ve kütüphaneleri için otomatik olarak uygun değerleri atayamayacak.
-## Adım-2:OpenCv Kaynak Kodu İndir
+## Adım-2:OpenCv Kaynak Kodu İndir:
+
+Bu çalışmada OpenCv'nin  3.1.0  versiyonunu kullanacağız. İhtiyacınıza göre olan versiyonu [buradan](https://github.com/opencv/opencv) indirip kurabilirsiniz.Zip olarak indirip arşivden aşağıdaki komutlarla çıkaracağız:
 Here's a useless table:
 
 | Number | Next number | Previous number |
