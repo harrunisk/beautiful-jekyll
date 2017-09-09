@@ -129,7 +129,37 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE
  -D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python 
  -D BUILD_EXAMPLES=ON .. 
 ~~~
-
+`~/opencv-3.1.0.zip` dosyasını indirip çıkartmıştık. Çıkarttığımız o dosyanın içine girmemiz gerekiyor. Burada kodları satır satır kopyalayıp derlemeniz hatalardan kaçınmak açısından daha faydalı olacaktır. Eğer `make` ya da `cmake` aşamalarında `stdlib.h: No such file or directory` şeklinde bir hata alıyorsanız `-D ENABLE_PRECOMPILED_HEADERS=OFF` satırını CMake konfigürasyon ayarları içine eklemeniz gerekli yani üstte ki kod bölmesinin en alt satırına eklemeniz gerekiyor. Garanti olması açısından `build` klasörünü silip(`rm -r build` kullanabilirsiniz) en baştan başlayarak hatadan kurtulabilirsiniz.  build  isimli alt klasörü oluşturduktan sonra  gerçek derleme öncesinde `cmake` ile gerekli ayarlamaları yaptık.  
+Gerçek derlemeye geçmeden önce  CMake çıktısını kontrol etmekte fayda var. Çıktıda önemli olan nokta `Python 2` ve `Python 3` başlıklı bölümler.  
+Eğer OpenCV derlemesini Python 2.7 için yapıyorsanız `Python 2` başlıklı bölümde `Interpreter`, `Libraries` , `numpy` ve `package path`  bölümlerine geçerli yolların atandığından emin olun. Çıktının aşağıdakine benzer bir şey olması gerekiyor:
+![Python2 Check](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg2Python2.png)
+Python 2.7 için `cv2` isimli bir sanal ortam oluşturdum.
+Python 3 için  `cv`  isimli bir sanal ortam oluşturdum.
+Bu çıktı bize şunları verecektir :
+`Interpreter`  bize   `cv2`   içindeki  Python 2.7 binary dosyalarını belirtir.  
+`Librariers` bize Python 2.7 kütüphanesini (1.bölümün sön adımında kurmuştuk) belirtir.  
+`numpy` bize `cv2` içindeki NumPy kurulumunu belirtir.  
+`packages path`  bize   `lib/python2.7/site-packages`'ı belirtiyor.`CMAKE_INSTALL_PREFIX` ile birleştirilip OpenCV' i derlediğimizde `cv2.so` bağlantılarını  `/usr/local/lib/python2.7/site-packages/` içinde bulacağız.  
+Eğer OpenCV derlemesini Python 3 için yapıyorsanız  çıktının aşağıdakine benzer bir şey olması gerekiyor:
+![Python3 Check](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg3Python3.png)
+Eğer  yukarıdaki değerler sizde benzer bir şekilde değilseniz büyük bir ihtimal CMake'den önce `cv` sanal değişkeni içine girmediniz demek. O zaman yapmanız gereken `workon cv` ile sanal değişkene erişip CMake komutlarını yeniden işletmeniz.
+CMake komutları hatasız olarak işlettiyseniz şimdi OpenCV derlemesine geçebiliriz:
+~~~
+make -j8
+~~~
+Burada `-j` OpenCV derlenirken kaç tane işlemci kullanacağınızı belirtiyor. Birden fazla işlemci kullanmak derlemeyi hızlandırmasına rağmen bazı durumlarda derleme işleminiz patlayabilir ve hatalarla karşılaşabilirsiniz. Bu durumlarda `make clean` ile yapıyı temizleyip derleme işlemini tek işlemci ile yapmak daha faydalı olacaktır.
+~~~
+make clean
+make
+~~~
+Başarılı bir derlemeden sonra benim ekranda aşağıda ki gibi bir görüntü oluştu:
+![OpenCv Compile](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg4OpenCvCompile.png)
+Son aşama OpenCV'i Ubuntu 16.04'de kurmak olacak:
+~~~
+sudo make install
+sudo ldconfig
+~~~
+## Adım-5:OpenCv Kurulumun Bitirilmesi
 Here's a useless table:
 
 | Number | Next number | Previous number |
