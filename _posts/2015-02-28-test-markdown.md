@@ -104,7 +104,7 @@ Sistemi kapatıp açıp yeni bir konsol açtığımızda `cv` sanal değişkenin
 workon cv
 ~~~
 Komutu işlettikten sonra şöyle bir ekranla karşılaşmanız gerekiyor:
-![Workon Cv](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg1Workoncv.png)
+![Workon Cv](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg1Workoncv.png)
 Eğer resimin ikinci satırında gördüğünüz gibi **(cv)** yazısı görmüyorsanız sanal değişkenimizin içinde değilsiniz demek. Sanal değişkenden çıkmak içinde `deactivate` komutunu kullanabilirsiniz.
 ### Python Sanal Değişkeni İçine NumPy Kurulumu
 OpenCV derlemeden önceki son adımımız matematiksel işlemlerde kullanılan [NumPy](http://www.numpy.org/) paketini kurmak olacak. NumPy'i kurmadan önce sanal değişken içinde olduğumuzdan emin olmamız lazım , eğer `cv` içinde değilseniz sistemin manual olarak kullandığı Python çevre değişkenleri içine kurulacak:
@@ -131,8 +131,9 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE
 ~~~
 `~/opencv-3.1.0.zip` dosyasını indirip çıkartmıştık. Çıkarttığımız o dosyanın içine girmemiz gerekiyor. Burada kodları satır satır kopyalayıp derlemeniz hatalardan kaçınmak açısından daha faydalı olacaktır. Eğer `make` ya da `cmake` aşamalarında `stdlib.h: No such file or directory` şeklinde bir hata alıyorsanız `-D ENABLE_PRECOMPILED_HEADERS=OFF` satırını CMake konfigürasyon ayarları içine eklemeniz gerekli yani üstte ki kod bölmesinin en alt satırına eklemeniz gerekiyor. Garanti olması açısından `build` klasörünü silip(`rm -r build` kullanabilirsiniz) en baştan başlayarak hatadan kurtulabilirsiniz.  build  isimli alt klasörü oluşturduktan sonra  gerçek derleme öncesinde `cmake` ile gerekli ayarlamaları yaptık.  
 Gerçek derlemeye geçmeden önce  CMake çıktısını kontrol etmekte fayda var. Çıktıda önemli olan nokta `Python 2` ve `Python 3` başlıklı bölümler.  
+
 Eğer OpenCV derlemesini Python 2.7 için yapıyorsanız `Python 2` başlıklı bölümde `Interpreter`, `Libraries` , `numpy` ve `package path`  bölümlerine geçerli yolların atandığından emin olun. Çıktının aşağıdakine benzer bir şey olması gerekiyor:
-![Python2 Check](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg2Python2.png)
+![Python2 Check](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg2Python2.png)
 Python 2.7 için `cv2` isimli bir sanal ortam oluşturdum.
 Python 3 için  `cv`  isimli bir sanal ortam oluşturdum.
 Bu çıktı bize şunları verecektir :
@@ -141,7 +142,7 @@ Bu çıktı bize şunları verecektir :
 `numpy` bize `cv2` içindeki NumPy kurulumunu belirtir.  
 `packages path`  bize   `lib/python2.7/site-packages`'ı belirtiyor.`CMAKE_INSTALL_PREFIX` ile birleştirilip OpenCV' i derlediğimizde `cv2.so` bağlantılarını  `/usr/local/lib/python2.7/site-packages/` içinde bulacağız.  
 Eğer OpenCV derlemesini Python 3 için yapıyorsanız  çıktının aşağıdakine benzer bir şey olması gerekiyor:
-![Python3 Check](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg3Python3.png)
+![Python3 Check](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg3Python3.png)
 Eğer  yukarıdaki değerler sizde benzer bir şekilde değilseniz büyük bir ihtimal CMake'den önce `cv` sanal değişkeni içine girmediniz demek. O zaman yapmanız gereken `workon cv` ile sanal değişkene erişip CMake komutlarını yeniden işletmeniz.
 CMake komutları hatasız olarak işlettiyseniz şimdi OpenCV derlemesine geçebiliriz:
 ~~~
