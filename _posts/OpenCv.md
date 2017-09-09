@@ -1,12 +1,9 @@
 ---
 layout: post
-title: Ubuntu 16.04'de OpenCv Kurulumu
-subtitle: Adım Adım Kurulum
+title: deneme
+subtitle: sayfa 2 
 ---
 
-Yazıya başlamadan önce Python 2.7 ve Python 3.5.2 Ubuntu 16.04 içinde hazır olarak kurulu olduğunu belirteyim.  
-* Python 2.7.12'e konsoldan `Python` komutunu kullanarak ulaşabilirsiniz.  
-* Python 3.5.2'e konsoldan `Python3` komutunu kullanarak ulaşabilirsiniz.
 
 Python 2.7 Ubuntu tarafından kullanılan varsayılan versiyon. Python 3'e geçmek gibi planlar var ama bunun için daha zaman var gibi gözüküyor. Bu yazıda OpenCv' nin kurulumu her iki versiyon içinde yapılacak ama sizin hangi versiyon için yapacağınıza karar vermeniz gerekiyor aksi halde bir sürü hata ile karşılaşmanız kaçınılmaz. Ama tavsiye olarak yeni başlıyorsanız Python 3 ile başlamanız daha yararlı olacaktır.  Python versiyonları arasındaki farkları anladığınızda Python 2.7 kodunu Python 3'e taşımak çok da zor değil.
 
