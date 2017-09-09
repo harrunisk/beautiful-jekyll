@@ -223,20 +223,3 @@ rm -rf opencv-3.1.0 opencv_contrib-3.1.0 opencv.zip opencv_contrib.zip
 Bu dosyaların silmeden önce OpenCV'nin sisteminizde düzgün bir şekilde kurulduğundan emin olun aksi halde tüm işlemleri tekrardan başlatmanız gerekebilir.
 
 
-## Boxes
-You can add notification, warning and error boxes like this:
-
-### Notification
-
-{: .box-note}
-**Note:** This is a notification box.
-
-### Warning
-
-{: .box-warning}
-**Warning:** This is a warning box.
-
-### Error
-
-{: .box-error}
-**Error:** This is an error box.
