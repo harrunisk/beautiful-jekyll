@@ -10,7 +10,7 @@ Yazıya başlamadan önce Python 2.7 ve Python 3.5.2 Ubuntu 16.04 içinde hazır
 
 Python 2.7 Ubuntu tarafından kullanılan varsayılan versiyon. Python 3'e geçmek gibi planlar var ama bunun için daha zaman var gibi gözüküyor. Bu yazıda OpenCv' nin kurulumu her iki versiyon içinde yapılacak ama sizin hangi versiyon için yapacağınıza karar vermeniz gerekiyor aksi halde bir sürü hata ile karşılaşmanız kaçınılmaz. Ama tavsiye olarak yeni başlıyorsanız Python 3 ile başlamanız daha yararlı olacaktır.  Python versiyonları arasındaki farkları anladığınızda Python 2.7 kodunu Python 3'e taşımak çok da zor değil.
 
-## Adım-1 : OpenCv Bağımlılıklarının Kurulumu:  
+## Adım-1 : OpenCv Bağımlılıklarının Kurulumu
 Tüm adımlarda konsol kullanacağımız için Ubuntu konsolu açıp öncelikle güncelleme ve  yükseltmelerinizi yapın.  
 ~~~
 sudo apt-get update 
@@ -45,7 +45,7 @@ sudo apt-get install libatlas-base-dev gfortran
 sudo apt-get install python2.7-dev python3.5-dev
 ~~~
 Bu başlıkları ve kütüphaneleri kurmadığınız taktirde 4.adımda  `cmake`  Python derleyicileri ve kütüphaneleri için otomatik olarak uygun değerleri atayamayacak.
-## Adım-2:OpenCv Kaynak Kodu İndir:
+## Adım-2:OpenCv Kaynak Kodu İndir
 
 Bu çalışmada OpenCv'nin  3.1.0  versiyonunu kullanacağız. İhtiyacınıza göre olan versiyonu [buradan](https://github.com/opencv/opencv) indirip kurabilirsiniz. Zip olarak indirip arşivden aşağıdaki komutlarla çıkaracağız:
 ~~~
@@ -60,6 +60,20 @@ unzip opencv_contrib.zip
 ~~~
 Burada derleme hataları almamak için dikkat edilmesi gereken nokta  **opencv**  ve  **opencv_contrib**  versiyonlarının aynı olması.  
 ## Adım-3:Python 2.7 yada Python 3.5 Gereksinimlerinin Kurulması
+Derleme için gerekli olan Python geliştirme araçlarını optimize etmeye başlayabiliriz. İlk adım olarak  pip  (Python Paket Yöneticisi) kurarak başlayabiliriz. Bu yazıda  `pip3`  yerine  `pip`  kullanacağız:
+~~~
+cd ~
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+~~~
+Kullanım kolaylığı ve pratikliği açısından bu projede [virtualenv](https://virtualenv.pypa.io/en/latest/) ve [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) kullanacağız.Bu kütüphaneler çalıştığımız her proje için ayrı ve bağımsız Python değişkenleri oluşturmamıza yarar.  Burada sanal ortam kullanmamızdaki asıl amaç her projenin ihtiyaç duyduğu kütüphanelerin farklı olmasından kaynaklı oluşan kirliliği ve dağınıklığı engellemek.  
+Neden sanal değişkenlerin(virtualenv ve virtualenvwrapper) çok yararlı bir yöntem olduğuna dair bir yazı okumak isterseniz [buradan](https://realpython.com/blog/python/python-virtual-environments-a-primer/) inceleyebilirsiniz.Bu yazının yarısında neden Python sanal değişkenler kullanıldığına dair bi yazı da [burada](http://www.pyimagesearch.com/2016/05/02/accessing-rpi-gpio-and-gpio-zero-with-opencv-python/).  
+Python topluluğunda sanal değişkenlere sahip olmak bir standart siz de yüklerseniz iyi olur:
+~~~
+sudo pip install virtualenv virtualenvwrapper
+sudo rm -rf ~/get-pip.py ~/.cache/pip
+~~~
+
 
 Here's a useless table:
 
