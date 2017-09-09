@@ -166,46 +166,62 @@ sudo make install
 sudo ldconfig
 ~~~
 ## Adım-5:OpenCv Kurulumun Bitirilmesi
-Here's a useless table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-
-How about a yummy crepe?
-
-![Crepe](http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg)
-
-Here's a code chunk:
-
+Son bir iki adım sonunda OpenCV sistemde tam olarak kullanılır duruma gelecek.
+### Python 2.7 İçin
+`sudo make install` komutunu işlettikten sonra, Python 2.7'nin OpenCV 3 için olan bağlamları `/usr/local/lib/python-2.7/site-packages/'` içinde konumlanmış olması gerekiyor. `ls` komutu ile kontrol edebilirsiniz:
 ~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
+ls -l /usr/local/lib/python2.7/site-packages/
+total 1972
+-rw-r--r-- 1 root staff 2016728 mag 30 03:27 cv2.so
 ~~~
+Bazı durumlarda OpenCv   `/usr/local/lib/python-2.7/site-packages/`  yerine    `/usr/local/lib/python-2.7/dist-packages/`    içine kurulmuş olabilir. Eğer  `/usr/local/lib/python-2.7/dist-packages/cv2.so` bağlamları  `site-packages`   dizininde yoksa     `dist-packages`  dizinini kontrol etmekte fayda var. Bu bölümde son aşama OpenCV    `cv2.so`  bağlamlarını cv sanal değişkenine sembolik bağlantı yapmak:
+~~~
+cd ~/.virtualenvs/cv/lib/python2.7/site-packages/
+ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+~~~
+### Python 3.5 İçin
 
-And here is the same code with syntax highlighting:
+  `sudo make install`  komutunu işlettikten sonra, Python 3.5'in OpenCV 3 için olan bağlamları   `/usr/local/lib/python-3.5/site-packages/`  içinde konumlanmış olması gerekiyor.  `ls`    komutu ile kontrol edebilirsiniz:  
+~~~
+ls -l /usr/local/lib/python3.5/site-packages/
+total 1972
+-rw-r--r-- 1 root staff 2016728 mag 30 03:27 cv2.so
+~~~
+Bazı durumlarda  `cv2.so` 'nun ismi farklı olabiliyor. `cv2.cpython-35m-x86_64-linux-gnu.so`  ismine benzer bi ismi olabilir.Dosyanun adını değiştirerek olası hatalardan kurtulabiliriz: 
+~~~
+cd /usr/local/lib/python3.5/site-packages/
+sudo mv cv2.cpython-35m-x86_64-linux-gnu.so cv2.so
+~~~
+İsmi değiştirdikten sonra son aşama    `cv2.so`  bağlamlarını cv sanal değişkenine sembolik bağlantı yapmak: 
+~~~
+cd ~/.virtualenvs/cv/lib/python3.5/site-packages/
+ln -s /usr/local/lib/python3.5/site-packages/cv2.so cv2.so 
+~~~
+## Adım-6:OpenCv Kurulumun Test Edilmesi
+Şu an Ubuntu 16.04 üzerinde OpenCV 3 kurulumunu bitirmiş bulunuyoruz. Test etmek için:  
+1.Yeni bir terminal aç.  
+2.`workon cv`  komutunu çalıştır  cv sanal değişkenine ulaş.  
+3.Python üzerinde OpenCV bağlamları çağır. 
+Aşağıda ki gibi bir şey yapabilirsiniz:
+~~~
+$ cd ~
+$ workon cv
+$ python
+Python 3.5.2 (default, Nov 17 2016, 17:05:23) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import cv2
+>>> cv2.__version__
+'3.1.0'
+>>> 
+~~~
+Yukarıda gördüğünüz gibi,OpenCV bağlamlarına Python 3.5 üzerinden erişebiliyorum.Python'un hangi versiyonunu kullandığınızdan bağımsız olarak bu yazıda ki adımları izleyerek OpenCV ve Python'u Ubuntu 16.04 üzerinde kurabilirsiniz.OpenCV'i kurduktan sonra   `opencv-3.1.0`  ve   `opencv-contrib-3.1.0`  klasörlerini ve   `.zip`  dosyalarını silebiliriz:
+~~~
+cd ~
+rm -rf opencv-3.1.0 opencv_contrib-3.1.0 opencv.zip opencv_contrib.zip
+~~~
+Bu dosyaların silmeden önce OpenCV'nin sisteminizde düzgün bir şekilde kurulduğundan emin olun aksi halde tüm işlemleri tekrardan başlatmanız gerekebilir.
 
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
-
-And here is the same code yet again but with line numbers:
-
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
 
 ## Boxes
 You can add notification, warning and error boxes like this:
