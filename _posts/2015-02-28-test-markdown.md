@@ -168,7 +168,7 @@ sudo ldconfig
 ## Adım-5:OpenCv Kurulumun Bitirilmesi
 Son bir iki adım sonunda OpenCV sistemde tam olarak kullanılır duruma gelecek.
 ### Python 2.7 İçin
-`sudo make install` komutunu işlettikten sonra, Python 2.7'nin OpenCV 3 için olan bağlamları `/usr/local/lib/python-2.7/site-packages/'` içinde konumlanmış olması gerekiyor. `ls` komutu ile kontrol edebilirsiniz:
+`sudo make install` komutunu işlettikten sonra, Python 2.7'nin OpenCV 3 için olan bağlamları `/usr/local/lib/python-2.7/site-packages/` içinde konumlanmış olması gerekiyor. `ls` komutu ile kontrol edebilirsiniz:
 ~~~
 ls -l /usr/local/lib/python2.7/site-packages/
 total 1972
