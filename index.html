@@ -19,8 +19,8 @@ use-site-title: true
     </a>
 
     <p class="post-meta">
-      {{ post.date | date: "%B %D, %Y" }} tarihinde yayınlandı.
-    </p>
+{{ post.date | date: "%-d, %-d, %Y" }} tarihinde yayınlandı.    
+	  </p>
 
     <div class="post-entry-container">
       {% if post.image %}
