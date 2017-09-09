@@ -104,6 +104,7 @@ Sistemi kapatıp açıp yeni bir konsol açtığımızda `cv` sanal değişkenin
 workon cv
 ~~~
 Komutu işlettikten sonra şöyle bir ekranla karşılaşmanız gerekiyor:
+![Workon Cv](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg1Workoncv.png)
 Here's a useless table:
 
 | Number | Next number | Previous number |
