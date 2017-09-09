@@ -67,14 +67,29 @@ wget https://bootstrap.pypa.io/get-pip.py
 sudo python get-pip.py
 ~~~
 Kullanım kolaylığı ve pratikliği açısından bu projede [virtualenv](https://virtualenv.pypa.io/en/latest/) ve [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/) kullanacağız.Bu kütüphaneler çalıştığımız her proje için ayrı ve bağımsız Python değişkenleri oluşturmamıza yarar.  Burada sanal ortam kullanmamızdaki asıl amaç her projenin ihtiyaç duyduğu kütüphanelerin farklı olmasından kaynaklı oluşan kirliliği ve dağınıklığı engellemek.  
+
 Neden sanal değişkenlerin(virtualenv ve virtualenvwrapper) çok yararlı bir yöntem olduğuna dair bir yazı okumak isterseniz [buradan](https://realpython.com/blog/python/python-virtual-environments-a-primer/) inceleyebilirsiniz.Bu yazının yarısında neden Python sanal değişkenler kullanıldığına dair bi yazı da [burada](http://www.pyimagesearch.com/2016/05/02/accessing-rpi-gpio-and-gpio-zero-with-opencv-python/).  
+
 Python topluluğunda sanal değişkenlere sahip olmak bir standart siz de yüklerseniz iyi olur:
 ~~~
 sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/get-pip.py ~/.cache/pip
 ~~~
+`virtualenv` ve `virtualwrapper`'ı kurduktan sonra   `~/.bashrc`'ı güncellememiz gerekiyor. `~/.bashrc` konsolu her açtığımızda çalışan kabuk script. Biz burada  `WORKON_HOME`  isimli çevre değişkenimizi Python sanal değişkenlerinin olduğu yeri işaret etmek için kullanacağız.Böylece gerekli ayarları  `virtualenvwrapper`'dan alabileceğiz.  `~/.bashrc`'ı güncellemek için basit bir yazı düzenleyici  `nano  vim`  ya da  `emacs` işimizi görecektir. Grafiksel düzenleyiciler de kullanılabilir  `geany`  ya da  `sublimetext` . En basit olarak  `nano`  iş görecektir.  
 
 
+Düzenleyicilerden kaçınarak  `cat`  komutu ile işimizi halledeceğiz:
+~~~
+echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.bashrc
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+~~~
+ `~/.bashrc`'ı düzenledikten sonra değişiklikleri yüklememiz gerekiyor:
+~~~
+source ~/.bashrc
+~~~
+`source` komutunu çağırmamız şu an çalıştığımız konsolu güncelleyecek. Çalıştığımız konsolu kapattıktan sonra yaptığımız yeni güncellemelerle birlikte `.bashrc` çalışacak.  
+`virtualenv` ve  `virtualenvwrapper`  kurulduktan sonraki adım. Gerekli olan Python değişkenlerini kurmak. Ama başlamadan önce bu değişkenleri Python 2.7 için mi kuracaksınız yoksa Python 3 için buna karar vermeniz gerekiyor. Yazı da her ikisi için de gerekli olan komutlara yer verilecek.
 Here's a useless table:
 
 | Number | Next number | Previous number |
