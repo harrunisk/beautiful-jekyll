@@ -76,8 +76,6 @@ sudo pip install virtualenv virtualenvwrapper
 sudo rm -rf ~/get-pip.py ~/.cache/pip
 ~~~
 `virtualenv` ve `virtualwrapper`'ı kurduktan sonra   `~/.bashrc`'ı güncellememiz gerekiyor. `~/.bashrc` konsolu her açtığımızda çalışan kabuk script. Biz burada  `WORKON_HOME`  isimli çevre değişkenimizi Python sanal değişkenlerinin olduğu yeri işaret etmek için kullanacağız.Böylece gerekli ayarları  `virtualenvwrapper`'dan alabileceğiz.  `~/.bashrc`'ı güncellemek için basit bir yazı düzenleyici  `nano  vim`  ya da  `emacs` işimizi görecektir. Grafiksel düzenleyiciler de kullanılabilir  `geany`  ya da  `sublimetext` . En basit olarak  `nano`  iş görecektir.  
-
-
 Düzenleyicilerden kaçınarak  `cat`  komutu ile işimizi halledeceğiz:
 ~~~
 echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.bashrc
@@ -90,6 +88,22 @@ source ~/.bashrc
 ~~~
 `source` komutunu çağırmamız şu an çalıştığımız konsolu güncelleyecek. Çalıştığımız konsolu kapattıktan sonra yaptığımız yeni güncellemelerle birlikte `.bashrc` çalışacak.  
 `virtualenv` ve  `virtualenvwrapper`  kurulduktan sonraki adım. Gerekli olan Python değişkenlerini kurmak. Ama başlamadan önce bu değişkenleri Python 2.7 için mi kuracaksınız yoksa Python 3 için buna karar vermeniz gerekiyor. Yazı da her ikisi için de gerekli olan komutlara yer verilecek.
+### Python Değişkenlerinin Oluşturulması
+Python 2.7 kullanacaksanız:
+~~~
+mkvirtualenv cv -p python2
+~~~
+Python 3 kullacakanız:
+~~~
+mkvirtualenv cv -p python3
+~~~
+Hangi Python sürümünüzü kullandığınızdan bağımsız olarak  `cv`(computer vision) isimli Python sanal değişkenimizi oluşturduk. Kendinize daha kolay gelen bir isim koyabilirsiniz. Yada başka sanal değişkenler oluşturabilirsiniz. Bu yazının geri kalanında `cv` kullanılacağı için kolaylık olması açısından `cv` koymak isabet olacaktır.
+### Cv Sanal Değişkeni İçinde Olduğumuzu Kontrol Edelim
+Sistemi kapatıp açıp yeni bir konsol açtığımızda `cv` sanal değişkenine ulaşmak için `workon` komutuna ihtiyaç duyacağız:
+~~~
+workon cv
+~~~
+Komutu işlettikten sonra şöyle bir ekranla karşılaşmanız gerekiyor:
 Here's a useless table:
 
 | Number | Next number | Previous number |
