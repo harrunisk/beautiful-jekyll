@@ -105,6 +105,31 @@ workon cv
 ~~~
 Komutu işlettikten sonra şöyle bir ekranla karşılaşmanız gerekiyor:
 ![Workon Cv](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg1Workoncv.png)
+Eğer resimin ikinci satırında gördüğünüz gibi **(cv)** yazısı görmüyorsanız sanal değişkenimizin içinde değilsiniz demek. Sanal değişkenden çıkmak içinde `deactivate` komutunu kullanabilirsiniz.
+### Python Sanal Değişkeni İçine NumPy Kurulumu
+OpenCV derlemeden önceki son adımımız matematiksel işlemlerde kullanılan [NumPy](http://www.numpy.org/) paketini kurmak olacak. NumPy'i kurmadan önce sanal değişken içinde olduğumuzdan emin olmamız lazım , eğer `cv` içinde değilseniz sistemin manual olarak kullandığı Python çevre değişkenleri içine kurulacak:
+~~~
+pip install numpy
+~~~
+## Adım-4:Ubuntu 16.04 de OpenCv Ayarlanması ve Derlenmesi
+Şu ana kadar OpenCv derlemesi için gerekli olan tüm gereklilikleri tamamladık. Bundan sonraki adımlar OpenCV'nin ayarlarının yapılması ve derlenmesi. Başlamadan önce `cv` sanal değişkeni içinde olduğunuzu tekrar kontrol etmeniz gerekiyor. Konsolda komut satırında yüm yazılardan önce (cv) şeklinde bir yazı görmeniz gerekiyor, en üstteki resimde olduğu gibi. Eğer `cv` sanal değişkeni içinde değilseniz:
+~~~
+workon cv
+~~~
+`cv` sanal değişkeni içinde olduğumuzdan emin olduktan sonra CMake kullanarak ayarlamalarımızı yapmaya başlayabiliriz:
+~~~
+cd ~/opencv-3.1.0/
+mkdir build
+cd build
+cmake -D CMAKE_BUILD_TYPE=RELEASE 
+ -D CMAKE_INSTALL_PREFIX=/usr/local   
+ -D INSTALL_PYTHON_EXAMPLES=ON 
+ -D INSTALL_C_EXAMPLES=OFF 
+ -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules 
+ -D PYTHON_EXECUTABLE=~/.virtualenvs/cv/bin/python 
+ -D BUILD_EXAMPLES=ON .. 
+~~~
+
 Here's a useless table:
 
 | Number | Next number | Previous number |
