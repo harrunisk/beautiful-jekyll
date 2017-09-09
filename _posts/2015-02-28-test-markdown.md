@@ -159,7 +159,7 @@ make clean
 make
 ~~~
 Başarılı bir derlemeden sonra benim ekranda aşağıda ki gibi bir görüntü oluştu:
-![OpenCv Compile](https://github.com/harrunisk/harrunisk.github.io/blob/master/img/OpenCvImg4OpenCvCompile.png)
+![OpenCv Compile](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg4OpenCvCompile.png)
 Son aşama OpenCV'i Ubuntu 16.04'de kurmak olacak:
 ~~~
 sudo make install
