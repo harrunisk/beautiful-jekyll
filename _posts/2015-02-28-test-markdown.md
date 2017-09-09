@@ -146,7 +146,8 @@ Bu çıktı bize şunları verecektir :
 `packages path`  bize   `lib/python2.7/site-packages`'ı belirtiyor.`CMAKE_INSTALL_PREFIX` ile birleştirilip OpenCV' i derlediğimizde `cv2.so` bağlantılarını  `/usr/local/lib/python2.7/site-packages/` içinde bulacağız.  
 
 Eğer OpenCV derlemesini Python 3 için yapıyorsanız  çıktının aşağıdakine benzer bir şey olması gerekiyor:
-![Python3 Check](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg3Python3.png)
+![Python3 Check](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/OpenCvImg3Python3.png)  
+
 Eğer  yukarıdaki değerler sizde benzer bir şekilde değilseniz büyük bir ihtimal CMake'den önce `cv` sanal değişkeni içine girmediniz demek. O zaman yapmanız gereken `workon cv` ile sanal değişkene erişip CMake komutlarını yeniden işletmeniz.
 CMake komutları hatasız olarak işlettiyseniz şimdi OpenCV derlemesine geçebiliriz:
 ~~~
