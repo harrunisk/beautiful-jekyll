@@ -107,7 +107,7 @@ url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 disqus: harrunisk-github-io
 
 # Fill in your Google Analytics ID to track your website using GA
-#google_analytics: ""
+google_analytics: UA-106188506-1
 
 # Google Tag Manager ID
 #gtm: ""
