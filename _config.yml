@@ -17,7 +17,7 @@ baseurl: ""
 title: Harun Işık 
 
 # Short description of your site
-description: It-Software-Blog
+description: It Blog
 
 # --- Navigation bar options --- #
 
@@ -51,11 +51,11 @@ avatar: "/img/avatar-icon.png"
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
-  name: Some Person
-  email: "youremail@domain.com"
+  name: Harun Işık
+  email: "harrunisk@gmail.com"
   facebook: yourname  # eg. daattali
-  github: yourname    # eg. daattali
-  twitter: yourname   # eg. daattali
+  github: harrunisk    # eg. daattali
+  twitter: harrunisk   # eg. daattali
   reddit: yourname    # eg. daattali
   google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
   linkedin: yourname  # eg. daattali
