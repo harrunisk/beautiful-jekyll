@@ -16,7 +16,7 @@ lspci -k | grep -A 2 -i "VGA"
 
 Sistemimde bir tane anakart üzerine yerleştirilmiş GeForce GT 650M ve UltraBuy teknolojisi ile harici bir tane daha GeForce GT 650M var oyunlarda 2 tane ekran kartının olması size 2 kat performans vermiyor ama Sli destekleyen oyunlarda 1.6 kat kadar performans artışı veriyor o da GeForce GT 765M ile hemen hemen aynı performansı veriyor. Tabi şu an için çok eski bir ekran kartı Nvidia'nın 1000 serisi yada Amd'nin yeni nesil kartları kartları ile  gerek mimari gerek enerji tüketimi olsun karşılaştırılamaz.
 ## Adım-2 : Nvidia Sürücülerinin Kurulması
-###Yöntem-1 
+### Yöntem-1 
 
 Ubuntuyu kurduğunuz zaman açık kaynak olan Nouveau sürücüsü ile geliyor ama bu sürücüden tam verim alamıyorsunuz. Bu yüzden uygun sürücüleri kurmak için 'sofware-properties-gtk' kuracağız.Kurmak için terminale:
 ~~~
@@ -26,13 +26,20 @@ Aslında bu da otomatik olarak geliyor Windows tuşuna basıp 'Additional Driver
 
 ![AdditionalDrivers](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/AdditionalDrivers.png)
 
-###Yöntem-2
+### Yöntem-2
 
 Terminali açıp aşağıdaki kodu işletirseniz sisteminiz için en uygun grafik sürücüsünü size verecektir.
  ~~~
  sudo ubuntu-drivers devices
 ~~~
 ![Recommended](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/Recommended.png)
+
+Tavsiye edilen sürümü apt-get ile terminalden de yükleyebilirsiniz.
+ ~~~
+sudo apt-get install nvidia-390
+~~~
+
+Yüklemeden sonra 'Additional Drivers' sekmesine geldiğiniz zaman terminalden yüklediğiniz sürücünün seçili olması lazım eğer seçili değilse yüklediğiniz sürücüyü seçerek 'Apply Changes' demeniz yeterli.
 
 
 
