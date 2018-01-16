@@ -53,7 +53,7 @@ Sürücüyü yükledikten sonra bilgisayarı yeniden başlatınca Nvidia ayarlar
  ~~~
  nvidia-settings
 ~~~
-yazarak ayarlara erişebiliriz. Burada açılan uygulamada yandaki seçmelerden 'PRIME PROFILES' sekmesinden Nvidia ya da Intel Kartlarından birisini seçebilirsiniz.
+yazarak ayarlara erişebiliriz. Burada açılan uygulamada yandaki sekmelerden 'PRIME PROFILES' sekmesinden Nvidia ya da Intel Kartlarından birisini seçebilirsiniz.
 
 Terminalden Intel kartı seçmek için:
  ~~~
