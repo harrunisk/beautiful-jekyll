@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ubuntu Ekran Kartı Yükleme ve Isınma Sorunu
-subtitle: Sli-Nvidia-Intel-Coolbits
+title: Ubuntu Ekran Kartı Yükleme, Çift Ekran Kartı Ayarları ve SLI
+subtitle: Sli-Nvidia-Intel-Coolbits-Overlock
 ---
 
 Window 10 ve Ubuntu 16.04 LTS beraber kullanırken 128 ssd alanı yeterli gelmediği için Windows 10'u sistemden kaldırarak Ubuntu 16.04 LTS ile devam etmeye karar verdim. İlk iş olarak Nvidia ekran kartı sürücülerini yükledim. Yükleme adımları için değişik türde bir çok kaynak var. Kurulumları adım adım aşağıda anlattım.
@@ -49,7 +49,7 @@ sudo apt purge nvidia-*
 
 ## Nvidia-Intel Grafik Kartlarından Birinin Seçimi
 
-Sürücüyü yükledikten sonra bilgisayarı yeniden başlatınca Nvidia ayarlar konsoluna erişmek windows tuşuna basıp `NVIDIA X Server Settings` yazarak ya da terminale
+Sürücüyü yükledikten sonra bilgisayarı yeniden başlatınca Nvidia ayarlar konsoluna erişmek için windows tuşuna basıp `NVIDIA X Server Settings` yazarak ya da terminale
  ~~~
  nvidia-settings
 ~~~
@@ -72,6 +72,10 @@ Hangi kartın seçili olduğunu görmek için terminale aşağıdaki kod parçac
 ~~~
 
 ## Nvidia Sli Aktif Edilmesi
+Sli teknolojisi kullanan arkadaşlar oyunlarda verim almak için Sli'ı aktif etmeleri gerekiyor bunun için aşağıdaki kod satırı yeterli:
+ ~~~
+sudo nvidia-xconfig --sli=On
+~~~
 
 
 
