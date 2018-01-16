@@ -41,6 +41,28 @@ sudo apt-get install nvidia-390
 
 Yüklemeden sonra `Additional Drivers` sekmesine geldiğiniz zaman terminalden yüklediğiniz sürücünün seçili olması lazım eğer seçili değilse yüklediğiniz sürücüyü seçerek `Apply Changes` demeniz yeterli.
 
+## Nvidia-Intel Grafik Kartlarından Birinin Seçimi
 
+Sürücüyü yükledikten sonra bilgisayarı yeniden başlatınca Nvidia ayarlar konsoluna erişmek windows tuşuna basıp `NVIDIA X Server Settings` yazarak ya da terminale
+ ~~~
+ nvidia-settings
+~~~
+yazarak ayarlara erişebiliriz. Burada açılan uygulamada yandaki seçmelerden 'PRIME PROFILES' sekmesinden Nvidia ya da Intel Kartlarından birisini seçebilirsiniz.
+
+Terminalden Intel kartı seçmek için:
+ ~~~
+ sudo prime-select intel
+~~~
+
+Terminalden Nvidia kartı seçmek için:
+
+ ~~~
+ sudo prime-select nvidia
+~~~
+
+Hangi kartın seçili olduğunu görmek için terminale aşağıdaki kod parçacığını yazarak erişebilirsiniz:
+ ~~~
+ sudo prime-select query 
+~~~
 
 
