@@ -12,3 +12,4 @@ Aşağıdaki kod parçacığını terminale koplayarak sisteminizde ekran kartı
 ~~~
 lspci -k | grep -A 2 -i "VGA"
 ~~~
+![GraphicCards](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/GraphicCards.png)
