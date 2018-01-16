@@ -14,4 +14,4 @@ lspci -k | grep -A 2 -i "VGA"
 ~~~
 ![GraphicCards](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/GraphicCards.png)
 
-Sistemimde bir tane anakart üzerine yerleştirilmiş GeForce GT 650M ve UltraBuy teknolojisi ile harici bir tane daha GeForce GT 650M var oyunlarda 2 tane ekran kartının olması size 2 kat performans vermiyor ama Sli destekleyen oyunlarda 1.6 kat kadar performans artışı veriyor o da GeForce GT 765M ile hemen hemen aynı performansı veriyor. Tabi şu an için çok eski bir ekran kartı Nvidia'nın 1000 serisi yada Amd'nin yeni nesil kartları kartları ile karşılaştırılamaz gerek mimari gerek enerji tüketimi olarak.
+Sistemimde bir tane anakart üzerine yerleştirilmiş GeForce GT 650M ve UltraBuy teknolojisi ile harici bir tane daha GeForce GT 650M var oyunlarda 2 tane ekran kartının olması size 2 kat performans vermiyor ama Sli destekleyen oyunlarda 1.6 kat kadar performans artışı veriyor o da GeForce GT 765M ile hemen hemen aynı performansı veriyor. Tabi şu an için çok eski bir ekran kartı Nvidia'nın 1000 serisi yada Amd'nin yeni nesil kartları kartları ile  gerek mimari gerek enerji tüketimi olsun karşılaştırılamaz.
