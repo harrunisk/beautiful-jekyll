@@ -40,6 +40,12 @@ sudo apt-get install nvidia-390
 ~~~
 
 Yüklemeden sonra `Additional Drivers` sekmesine geldiğiniz zaman terminalden yüklediğiniz sürücünün seçili olması lazım eğer seçili değilse yüklediğiniz sürücüyü seçerek `Apply Changes` demeniz yeterli.
+## Nvidia Sürücülerinin Kaldırılması
+
+Sürücülerde bazen konfigurasyonlar yaparken hatalar ile karşılaşabiliyoruz aşağıdaki kod ile  sürücüleri tamamen kaldırabiliriz:
+ ~~~
+sudo apt purge nvidia-*
+~~~
 
 ## Nvidia-Intel Grafik Kartlarından Birinin Seçimi
 
@@ -64,5 +70,8 @@ Hangi kartın seçili olduğunu görmek için terminale aşağıdaki kod parçac
  ~~~
  sudo prime-select query 
 ~~~
+
+## Nvidia Sli Aktif Edilmesi
+
 
 
