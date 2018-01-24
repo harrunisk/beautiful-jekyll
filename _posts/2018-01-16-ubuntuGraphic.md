@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu Ekran Kartı Yükleme, Çift Ekran Kartı Ayarları ve SLI
-subtitle: Sli-Nvidia-Intel-Coolbits-Overlock
+subtitle: Sli-Nvidia-Intel
 ---
 
 Window 10 ve Ubuntu 16.04 LTS beraber kullanırken 128 ssd alanı yeterli gelmediği için Windows 10'u sistemden kaldırarak Ubuntu 16.04 LTS ile devam etmeye karar verdim. İlk iş olarak Nvidia ekran kartı sürücülerini yükledim. Yükleme adımları için değişik türde bir çok kaynak var. Kurulumları adım adım aşağıda anlattım.
