@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu Isınma Sorunu
-subtitle: Sli-Nvidia-Coolbits
+subtitle: Nvidia-Coolbits
 ---
 
 ## Isınma Sorunu
