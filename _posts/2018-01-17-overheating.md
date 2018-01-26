@@ -12,17 +12,24 @@ Sürücüleri yüklemeden önce ısınma sorunu yaşıyordum. Nvidia sürücüle
 ![PerformanceBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/PerformanceBefore2.png)
 
 
-Sıcaklıklar böyle olunca [X Server](https://www.x.org/archive/current/doc/man/man5/xorg.conf.5.xhtml) ayarlarını değiştirmek gerekti. Ayarları değiştireceğimiz konfigürasyon dosyasını `/etc/X11/xorg.conf` şeklinde bulabilirsiniz eğer bu dosya oluşturulmamışsa terminale `nvidia-xconfig` yazarak konfigurasyonları içeren dosyayı otomatik olarak oluşturabilirsiniz. `xorg.conf` oluşturulması ile ilgili işinize yarayacak bir [kaynak](https://askubuntu.com/questions/217758/how-to-make-an-xorg-conf-file). Aşağıdaki kodda kalın yazılmış satır benim eklediğim yer:
+Sıcaklıklar böyle olunca [X Server](https://www.x.org/archive/current/doc/man/man5/xorg.conf.5.xhtml) ayarlarını değiştirmek gerekti. Ayarları değiştireceğimiz konfigürasyon dosyasını `/etc/X11/xorg.conf` şeklinde bulabilirsiniz eğer bu dosya oluşturulmamışsa terminale `nvidia-xconfig` yazarak konfigurasyonları içeren dosyayı otomatik olarak oluşturabilirsiniz. `xorg.conf` oluşturulması ile ilgili işinize yarayacak bir [kaynak](https://askubuntu.com/questions/217758/how-to-make-an-xorg-conf-file). 
+~~~
+Option         "RegistryDwords" "PowerMizerEnable=0x1; PowerMizerDefaultAC=0x3;"
+~~~
+Üstteki satırı `/etc/X11/xorg.conf` dosyamda "Screen" sekmesine ekleyeceğim. Isterseniz "Device" sekmesine de ekleyebilirsiniz. Bu şekilde yapan kaynak [sayfam](http://z-issue.com/wp/nvidia-linux-drivers-powermizer-coolbits-performance-levels-and-gpu-fan-settings/).
 ~~~
 Section "Screen"
     Identifier     "Screen0"
     Device         "Device0"
     Monitor        "Monitor0"
     DefaultDepth    24
-    Option         "SLI" "On"
-    Option         "MultiGPU" "On"
-    **Option         "RegistryDwords" "PowerMizerEnable=0x1; PowerMizerDefaultAC=0x3;"**
+    Option         "RegistryDwords" "PowerMizerEnable=0x1; PowerMizerDefaultAC=0x3;"
     SubSection     "Display"
         Depth       24
     EndSubSection
 ~~~    
+satırı ekledikten sonra "Screen" bölümünün son hali bu şekilde oldu. Bu satır bende ısınma sorununu çözdü. Daha ayrıntılı olarak [Linux NVIDIA Sürücüleri](http://us.download.nvidia.com/XFree86/Linux-x86_64/364.19/README/index.html) ve [konfigürasyonlar]. Optimizasyon sonrası sıcaklık ve performans değerlerim.
+
+![TemperatureBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/TemperatureAfter.png)
+
+![PerformanceBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/PerformanceAfter.png)
