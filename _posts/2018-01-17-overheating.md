@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu Isınma Sorunu
+title: Ubuntu 16.04 TLS Isınma Sorunu
 subtitle: Nvidia-Coolbits
 ---
 
@@ -34,3 +34,5 @@ Optimizasyon sonrası sıcaklık ve performans değerlerim.
 ![TemperatureBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/TemperatureAfter.png)
 
 ![PerformanceBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/PerformanceAfter.png)
+
+GPU fan ayarları, frekans değerleri ve voltaj artırımlası ile ilgili [kısa bir yazı.](http://z-issue.com/wp/nvidia-linux-drivers-powermizer-coolbits-performance-levels-and-gpu-fan-settings/) 
