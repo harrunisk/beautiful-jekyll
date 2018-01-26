@@ -12,4 +12,17 @@ Sürücüleri yüklemeden önce ısınma sorunu yaşıyordum. Nvidia sürücüle
 ![PerformanceBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/PerformanceBefore2.png)
 
 
-Sıcaklıklar böyle olunca [X Server](https://www.x.org/archive/current/doc/man/man5/xorg.conf.5.xhtml) Ayarlarını değiştirmek gerekti.
+Sıcaklıklar böyle olunca [X Server](https://www.x.org/archive/current/doc/man/man5/xorg.conf.5.xhtml) ayarlarını değiştirmek gerekti. Ayarları değiştireceğimiz konfigürasyon dosyasını `/etc/X11/xorg.conf` şeklinde bulabilirsiniz eğer bu dosya oluşturulmamışsa terminale `nvidia-xconfig` yazarak konfigurasyonları içeren dosyayı otomatik olarak oluşturabilirsiniz. `xorg.conf` oluşturulması ile ilgili işinize yarayacak bir [kaynak](https://askubuntu.com/questions/217758/how-to-make-an-xorg-conf-file). Aşağıdaki kodda kalın yazılmış satır benim eklediğim yer:
+~~~
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    DefaultDepth    24
+    Option         "SLI" "On"
+    Option         "MultiGPU" "On"
+    **Option         "RegistryDwords" "PowerMizerEnable=0x1; PowerMizerDefaultAC=0x3;"**
+    SubSection     "Display"
+        Depth       24
+    EndSubSection
+~~~    
