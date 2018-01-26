@@ -28,7 +28,7 @@ Section "Screen"
         Depth       24
     EndSubSection
 ~~~    
-satırı ekledikten sonra "Screen" bölümünün son hali bu şekilde oldu. Bu satır bende ısınma sorununu çözdü. Daha ayrıntılı olarak [Linux NVIDIA Sürücüleri](http://us.download.nvidia.com/XFree86/Linux-x86_64/364.19/README/index.html) ve [konfigürasyonlar](http://us.download.nvidia.com/XFree86/Linux-x86_64/364.19/README/xconfigoptions.html).Tabi ekran kartının performansının düşük seviyede tutulması kartı zorlayan işlemlerde işinizi görmeyecektir eklediğimiz satırı kaldırarak ya da xorg ayarlarını biraz daha karıştırarak kendinize uygun bir optimizasyon yapabilirsiniz.
+Satırı ekledikten sonra "Screen" bölümünün son hali bu şekilde oldu. Bu satır bende ısınma sorununu çözdü. Daha ayrıntılı olarak [Linux NVIDIA Sürücüleri](http://us.download.nvidia.com/XFree86/Linux-x86_64/364.19/README/index.html) ve [konfigürasyonlar](http://us.download.nvidia.com/XFree86/Linux-x86_64/364.19/README/xconfigoptions.html). Tabi ekran kartının performansının düşük seviyede tutulması kartı zorlayan işlemlerde işinizi görmeyecektir eklediğimiz satırı kaldırarak ya da xorg ayarlarını biraz daha karıştırarak kendinize uygun bir optimizasyon yapabilirsiniz.
 Optimizasyon sonrası sıcaklık ve performans değerlerim.
 
 ![TemperatureBefore](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/TemperatureAfter.png)
