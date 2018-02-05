@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu 16.04 TLS Ekran Kartı Yükleme, Çift Ekran Kartı Ayarları ve SLI
+title: Ubuntu 16.04 LTS Ekran Kartı Yükleme, Çift Ekran Kartı Ayarları ve SLI
 subtitle: Sli-Nvidia-Intel
 ---
 
