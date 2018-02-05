@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ubuntu 16.04 TLS Isınma Sorunu
+title: Ubuntu 16.04 LTS Isınma Sorunu
 subtitle: Nvidia-Coolbits
 ---
 
