@@ -33,7 +33,12 @@ Bu 8 adım biraz sıkıcı gelebilir direkt olarak aşağıdaki görsel üzerind
 
 Şu anlık ESP8266'ya herhangi bir şey yüklemeyeceğiz bu yüzden herhangi bir board seçmemize gerek yok. Arduinun bağlı olduğu
 portu seçip serial monitor ekranında 115200 baud hızını ve satır bitişini Both NL & CR seçtinten sonra `AT` Komutu gönderirseniz
-size `OK` şeklinde bir cevap gelmesi gerekiyor.  
+size `OK` şeklinde bir cevap gelmesi gerekiyor.  Eğer cevap alamıyorsanız direkt güncelleme adımına geçin güncelledikten sonra tekrar deneyin.
+
+## Güncelleme
+
+Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.ESP8266Flasher-x86-v0.9.2.3.exe'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak.Bu ekranda sarı ile işaretlenmiş menüye tıklayın.
+
 ## Hatalar
 Eğer ubuntu kullanıyorsanız `Error opening serial port '/dev/ttyUSB0'` şeklinde bir hata alırsanız gerekli izinleri aşağıdaki
 şekilde vererek hatadan kurtabilirsiniz:
