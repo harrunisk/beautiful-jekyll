@@ -59,3 +59,7 @@ sudo chown username /dev/ttyUSB0
 
 Eğer hala buna benzer bir hata varsa [burayı](https://www.arduino.cc/en/Guide/Linux) ziyaret edip aşağılarda çözüme ulaşabilirsiniz.
 
+### Kaynaklar
+[http://www.teomaragakis.com/hardware/electronics/how-to-connect-an-esp8266-to-an-arduino-uno/](http://www.teomaragakis.com/hardware/electronics/how-to-connect-an-esp8266-to-an-arduino-uno/)
+[http://maker.robotistan.com/esp8266-ile-iot-dersleri-1-esp8266-modulunu-guncelleme/](http://maker.robotistan.com/esp8266-ile-iot-dersleri-1-esp8266-modulunu-guncelleme/)
+
