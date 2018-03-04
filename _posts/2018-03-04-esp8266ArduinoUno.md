@@ -37,7 +37,13 @@ size `OK` şeklinde bir cevap gelmesi gerekiyor.  Eğer cevap alamıyorsanız di
 
 ## Güncelleme
 
-Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.ESP8266Flasher-x86-v0.9.2.3.exe'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak.Bu ekranda sarı ile işaretlenmiş menüye tıklayın.
+Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.  `ESP8266Flasher-x86-v0.9.2.3.exe` 'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak. Bu ekranda sarı ile işaretlenmiş menüye tıklayın.
+![beforeUpdate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/beforeUpdate1.png)
+
+Açılan yeni menüden çıkarttığınız yerdeki dosyaların yollarını yükleme yapılacak adresleri girmeniz gerekiyor örnek resim:
+![beforeUpdate2](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/beforeUpdate2Updated.png)
+
+
 
 ## Hatalar
 Eğer ubuntu kullanıyorsanız `Error opening serial port '/dev/ttyUSB0'` şeklinde bir hata alırsanız gerekli izinleri aşağıdaki
