@@ -4,8 +4,7 @@ title: Arduino Uno Esp 8266 Bağlantısı ve Güncelleme
 subtitle: ESP8266 Arduino Uno
 ---
 Arduino Uno ve ESP8266 bağlantısının nasıl yapılması gerektiği ile ilgili yerli yabancı bir sürü kaynak var. Bu birazda ESP8266'nın
-çok ucuz bir model olmasından kaynaklı olarak stabil bir kurulumun sağlanamış olması olabilir. ESP8266 10-12 tane kadar modeli var sanırım
-ve projem için en ucuz olanını(ESP8266-01) seçtim bilseydim biraz daha para verip kurulum ve güncelleme için bu kadar uğraşmazdım.
+çok ucuz bir model olmasından kaynaklı olarak stabil bir kurulumun sağlanamış olması olabilir. ESP8266'nın 10-12 tane kadar modeli var sanırım ve projem için en ucuz ve sorunlu olanını(ESP8266-01) seçtim.  
 ## Bağlantının Yapılması
 Kullanacağımız ekipmanlar Arduino Uno, Breadboard ve Esp8266-01
 
