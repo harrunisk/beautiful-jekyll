@@ -43,7 +43,7 @@ Bir sonraki yazıda sıcaklık ve nem verilerinin MQTT protokolü ile ESP8266 ku
 
 
 ## Hatalar
-Eğer ubuntu kullanıyorsanız `Error opening serial port '/dev/ttyUSB0'` şeklinde bir hata alırsanız gerekli izinleri aşağıdaki
+Eğer ubuntu kullanıyorsanız Arduino IDE'de `Error opening serial port '/dev/ttyUSB0'` şeklinde bir hata alırsanız gerekli izinleri aşağıdaki
 şekilde vererek hatadan kurtabilirsiniz:
 ~~~
 sudo chown username /dev/ttyUSB0
