@@ -40,9 +40,14 @@ size `OK` şeklinde bir cevap gelmesi gerekiyor.  Eğer cevap alamıyorsanız di
 Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.  `ESP8266Flasher-x86-v0.9.2.3.exe` 'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak. Bu ekranda sarı ile işaretlenmiş menüye tıklayın.
 ![beforeUpdate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/beforeUpdate1.png)
 
-Açılan yeni menüden çıkarttığınız yerdeki dosyaların yollarını yükleme yapılacak adresleri girmeniz gerekiyor örnek resim:
+Açılan yeni menüden çıkarttığınız yerdeki dosyaların yollarını ve yükleme yapılacak adresleri girmeniz gerekiyor örnek resim:  
 ![beforeUpdate2](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/beforeUpdate2Updated.png)
 
+
+Dosya yollarını girdikten sonra ESP8266'yı yükleme moduna almamız gerekiyor bunun için ESP'deki GPIO0 ucunu arduinodaki GND ucuna(Arduino'daki boş GND'lerden birisi olabilir) bağlıyoruz ve arduinoya reset atıyoruz(USB kullanıyorsanız çıkar tak yapabilirsiniz). Resetten sonra artık ESP8266'mız güncellemeye hazır. `ESP8266Flasher-x86-v0.9.2.3.exe`'de bir bir önceki ekrana dönüyoruz aşağıdaki resimde sağ üstte sarı yuvarlak ile gösterilen yere tıklıyoruz. Herşey düzgün gittiyse ortaki okun gösterdiği yerdeki mavi yer dolacak ve sol alttaki ok ile gösterilen tik oluşacak. Arduinoyu güncellemiş olduk şu an wi-fi' a bağlanma konusunda daha stabil olacak.  
+![afterUpdate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/updated1.1.png)
+  
+Bir sonraki yazıda sıcaklık ve nem verilerinin MQTT protokolü ile ESP8266 kullanarak android üzerinde grafiksel olarak gösterilmesini yazacağım.
 
 
 ## Hatalar
