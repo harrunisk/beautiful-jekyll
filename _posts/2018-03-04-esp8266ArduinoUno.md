@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Arduino Uno Esp 8266 Bağlantısı ve Güncelleme 
+title: Arduino Uno ESP8266 Bağlantısı ve Güncelleme 
 subtitle: ESP8266 Arduino Uno
 ---
 Arduino Uno ve ESP8266 bağlantısının nasıl yapılması gerektiği ile ilgili yerli yabancı bir sürü kaynak var. Bu birazda ESP8266'nın
