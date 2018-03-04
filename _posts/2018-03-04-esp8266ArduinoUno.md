@@ -22,12 +22,13 @@ Bu 8 adım biraz sıkıcı gelebilir direkt olarak aşağıdaki görsel üzerind
 ![Arduino Sketch](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/Arduino_Esp8266.png)
 
 
-Şu anlık ESP8266'ya herhangi bir şey yüklemeyeceğiz bu yüzden herhangi bir board seçmemize gerek yok. Arduinun bağlı olduğu
-portu seçip serial monitor ekranında 115200 baud hızını ve satır bitişini Both NL & CR seçtikten sonra `AT` Komutu gönderirseniz size `OK` şeklinde bir cevap gelmesi gerekiyor.  Eğer cevap alamıyorsanız direkt güncelleme adımına geçin güncelledikten sonra tekrar deneyin.
+Şu anlık ESP8266'ya herhangi bir şey yüklemeyeceğiz bu yüzden herhangi bir board seçmemize gerek yok. Arduino IDE'de Arduinun bağlı olduğu portu seçip serial monitor ekranında 115200 baud hızını ve satır bitişini Both NL & CR seçtikten sonra `AT` Komutu gönderirseniz size `OK` şeklinde bir cevap gelmesi gerekiyor.  Eğer cevap alamıyorsanız direkt güncelleme adımına geçin güncelledikten sonra tekrar deneyin.
 
 ## Güncelleme
 
-Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.  `ESP8266Flasher-x86-v0.9.2.3.exe` 'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak. Bu ekranda sarı ile işaretlenmiş menüye tıklayın.  
+Devremizi yukarıdaki gibi kurduktan sonra güncelleme işlemi yapacağız. Güncelleme dosyalarını [buradan](http://maker.robotistan.com/download/ESP8266-Uptade.zip) indirin. İndirdikten sonra rar dan çıkarın.  `ESP8266Flasher-x86-v0.9.2.3.exe` 'yi çalıştırın ve karşınıza aşağıdaki gibi bir ekran çıkacak. Bu ekranda sarı ile işaretlenmiş menüye tıklayın. 
+  
+  
 ![beforeUpdate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/beforeUpdate1.png)
 
 Açılan yeni menüden çıkarttığınız yerdeki dosyaların yollarını ve yükleme yapılacak adresleri girmeniz gerekiyor örnek resim:  
