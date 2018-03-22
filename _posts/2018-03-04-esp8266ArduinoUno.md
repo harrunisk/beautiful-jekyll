@@ -39,8 +39,6 @@ Dosya yollarını girdikten sonra ESP8266'yı yükleme moduna almamız gerekiyor
 
 ![afterUpdate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/updated1.1.png)
   
-Bir sonraki yazıda sıcaklık ve nem verilerinin MQTT protokolü ile ESP8266 kullanarak android üzerinde grafiksel olarak gösterilmesini yazacağım.
-
 
 ## Hatalar
 Eğer ubuntu kullanıyorsanız Arduino IDE'de `Error opening serial port '/dev/ttyUSB0'` şeklinde bir hata alırsanız gerekli izinleri aşağıdaki
