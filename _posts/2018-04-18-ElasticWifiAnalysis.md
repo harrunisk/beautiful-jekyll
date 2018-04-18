@@ -126,17 +126,42 @@ date {
 
 ~~~ 
 Aşağıdaki filtre ile veri setimize saat, dakika ve saniye alanlarını ekliyoruz:
-~~~ 
-mutate {
-add_field => {"[hour]" => "%{+HH}"}
-add_field => {"[minute]" => "%{+mm}"}
-add_field => {"[second]" => "%{+ss}"}
+  ~~~ 
+  mutate {
+  add_field => {"[hour]" => "%{+HH}"}
+  add_field => {"[minute]" => "%{+mm}"}
+  add_field => {"[second]" => "%{+ss}"}
 
-}
-~~~ 
+  }
+  ~~~ 
 Aşağıdaki filtre ile veri setimizdeki değerleri matematiksel işlemler yapabilmek için integer tipine parse ediyoruz.
-:
+~~~
+mutate {
+     convert => [ "rssi", "integer" ]
+     convert => [ "frame.size", "integer" ]
+     convert => [ "data.rate", "integer" ]   
+     convert => [ "second", "integer" ]  
+     convert => [ "minute", "integer" ]  
+     convert => [ "hour", "integer" ]  
 
+   }
+~~~
+
+Aşağıdaki filtre ile çerçevelerin matematiksel karşılıklarını anlamlı veriler haline getiriyoruz.
+~~~
+   if[frame.type]=="0"{
+   mutate {
+     replace => [ "frame.type", "Management" ]
+   }}
+   if[frame.type]=="1"{
+   mutate {
+     replace => [ "frame.type", "Control" ]
+   }}
+   if[frame.type]=="2"{
+   mutate {
+     replace => [ "frame.type", "Data" ]
+   }}
+~~~
 
 
 
