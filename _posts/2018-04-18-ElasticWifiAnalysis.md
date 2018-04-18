@@ -54,6 +54,26 @@ tshark -a duration:600 -i phy0.mon -t ad -t ad -lT fields -E separator=, -E quot
 Kalan alanlar kullanılan filtrelerin ne şekilde ayrılacağı ile ilgili.  
 
 ## 2.Yakalan Paketlerin Filebeat İle Dinlenmesi
+Filebeat 1.adımda oluşturduğumuz tshark.csv dosyasını dinleyecek ve buradaki değişiklikleri Logstash'e aktaracak. Bunun için filebeat.yml dosyasını aşağıdaki şekilde değiştiriyoruz.  
+~~~
+filebeat.modules:
+- module: system
+  syslog:
+    enabled: false
+  auth:
+    enabled: true
+    var.paths: ["/home/tshark.csv"]
+name: test
+output.logstash:
+  hosts: ["localhost:5044"]
+~~~
+İndirme linki [filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/filebeat.yml)
+`var.paths: ["/home/tshark.csv"]` dosyamızın yolu kendinize göre değiştirin.  
+filebeat.yml dosyasına linux sistemler için aşağıdaki yol ile ulaşabilirsiniz:
+~~~
+cd /etc/filebeat
+sudo subl filebeat.yml
+~~~
 
 
 
