@@ -13,7 +13,7 @@ dosyaya yazacak. Filebeat dosyayı dinleyecek Logstash'e aktaracak. Logstash bur
 Elasticsearch'e aktaracak. Kibana kullanarak analizlerimi yapacağım.
 Mimarimiz aşağıdaki şekilde olacak:  
 ![Architecture](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/ArchitectureBlog.png)  
-Wifi paketlerinin analizde kullanacağım filtreler:  
+Wifi paketlerinin analizinde kullanacağım filtreler:  
 
 | Filtre        | Açıklama           |   
 | ------------- |:-------------:| -----:|
@@ -108,7 +108,7 @@ output {
   }
 }
 ~~~
-En son olarakta verileri analiz edebilmek filtre kısmını ayarlamamız gerekiyor burada filtreleri parça parça vereceğim bu adım sonunda da logstash.yml dosyasının tamamına ulaşabilirsiniz.  
+En son olarakta verileri analiz edebilmek için filtre kısmını ayarlamamız gerekiyor burada filtreleri parça parça vereceğim bu adım sonunda da logstash.yml dosyasının tamamına ulaşabilirsiniz.  
 
 Aşağıdaki filtre ile tshark'da oluşan alanların isimlerini belirliyoruz ve ayırıyoruz.
 ~~~
@@ -164,6 +164,22 @@ Aşağıdaki filtre ile çerçevelerin matematiksel karşılıklarını anlamlı
 ~~~  
   
 Filebeat.yml dosyasının son hali şu şekilde olmalı: [Filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/logstash.conf).
+
+## 4.Son Adım
+Özet olarak yukarıdaki konfigürasyonları yaptıktan sonra tshark ile paketleri topluyoruz.
+~~~
+tshark -a duration:600 -i phy0.mon -t ad -t ad -lT fields -E separator=, -E quote=d   -e _ws.col.Time  -e wlan.fc.type -e wlan.fc.type_subtype -e radiotap.dbm_antsignal -e frame.len -e radiotap.datarate	 > tshark.csv
+~~~
+Elasticsearch, Kibana, Logstash ve Filebeat'i aktif hale getiriyoruz.  
+Yükleme tarzınıza göre değişmekle birlikte linux sistemler için:
+~~~
+sudo systemctl start elasticsearch.service kibana.service logstash.service filebeat.service  
+~~~
+
+Belirli bir süre geçtikten sonra verileri Elasticsearch içinde indekslemiş olacak. Yeni bir index pattern oluşturarak. `Management>Index Patterns >Create Index` diyerek yeni bir index pattern oluşturduktan sonra `Visualize` sekmesinden kendinize göre analizler yapabilirsiniz. Örnek analizler:
+
+
+
 
 
 
