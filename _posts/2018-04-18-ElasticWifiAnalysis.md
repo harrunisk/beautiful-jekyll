@@ -69,6 +69,7 @@ output.logstash:
 ~~~
 İndirme linki [filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/filebeat.yml)  
 `var.paths: ["/home/tshark.csv"]` dosyamızın yolu kendinize göre değiştirin.  
+Windows sistemlerde filebeat'in kurulu olduğu yerden erişebilirsiniz sanırım.  
 filebeat.yml dosyasına linux sistemler için aşağıdaki yol ile ulaşabilirsiniz:
 ~~~
 cd /etc/filebeat
