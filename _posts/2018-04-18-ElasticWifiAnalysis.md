@@ -24,7 +24,7 @@ Wifi paketlerinin analizde kullanacağım filtreler:
 | radiotap.datarate | Veri Akış Hızı      |   
 
 
-Filtre   |   Açıklama   |
+Filtre   |   Açıklama
 
 
 
