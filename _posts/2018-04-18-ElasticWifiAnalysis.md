@@ -14,22 +14,14 @@ Elasticsearch'e aktaracak. Kibana kullanarak analizlerimi yapacağım.
 Mimarimiz aşağıdaki şekilde olacak:  
 ![Architecture](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/ArchitectureBlog.png)  
 Wifi paketlerinin analizde kullanacağım filtreler:  
-|   Filtre                |   Açıklama        |
-| -------------           |:-------------:    |
-| wlan.fc.type            | Çerçeve Türü      |
-| wlan.fc.type_subtype    | Çerçeve Alt Türü  |
-| radiotap.dbm_antsignal  | Sinyal Gücü(RSSI) |
-| frame.len               | Çerçeve Boyutu    |
-| radiotap.datarate       | Veri Akış Hızı    |
 
-
-| Filtre        | Açıklama           | Cool  |
+| Filtre        | Açıklama           | 
 | ------------- |:-------------:| -----:|
-| wlan.fc.type      | Çerçeve Türü | $1600 |
-| wlan.fc.type_subtype      | Çerçeve Alt Türü      |   $12 |
-| radiotap.dbm_antsignal | Sinyal Gücü(RSSI)      |    $1 |
-| frame.len      | Çerçeve Boyutu      |   $12 |
-| radiotap.datarate | Veri Akış Hızı      |    $1 |
+| wlan.fc.type      | Çerçeve Türü | 
+| wlan.fc.type_subtype      | Çerçeve Alt Türü      |   
+| radiotap.dbm_antsignal | Sinyal Gücü(RSSI)      |    
+| frame.len      | Çerçeve Boyutu      |   
+| radiotap.datarate | Veri Akış Hızı      |   
 
 
 
