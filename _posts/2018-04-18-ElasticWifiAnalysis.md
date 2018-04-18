@@ -163,8 +163,13 @@ Aşağıdaki filtre ile çerçevelerin matematiksel karşılıklarını anlamlı
    }}
 ~~~  
   
-Filebeat.yml dosyasının son hali şu şekilde olmalı: [Filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/logstash.conf).
-
+Logstash.yml dosyasının son hali şu şekilde olmalı: [Logstash.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/logstash.conf).   
+#### Düzeltme  
+Eğer yukarıdaki gibi Logstash.yml ile çalışmıyorsa. Logstash.conf isimli bir konfigürasyon dosyası oluşturup yukarıdaki Logstash.yml dosyasını içine kopyalayın. Ve logstash dosyalarının kurulu olduğu yerde bin klasörü içinde komut satırından:
+~~~
+./logstash -f Logstash.conf 
+~~~
+ile çalıştırın -f hangi konfigürasyon dosyası ile çalışacağını belirtiyor. Burada dosyayı kaydettiğiniz yolu da girmeniz gerekiyor.
 ## 4.Son Adım
 Özet olarak yukarıdaki konfigürasyonları yaptıktan sonra tshark ile paketleri topluyoruz.
 ~~~
