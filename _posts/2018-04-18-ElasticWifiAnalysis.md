@@ -176,10 +176,14 @@ Yükleme tarzınıza göre değişmekle birlikte linux sistemler için:
 sudo systemctl start elasticsearch.service kibana.service logstash.service filebeat.service  
 ~~~
 
-Belirli bir süre geçtikten sonra verileri Elasticsearch içinde indekslemiş olacak. Yeni bir index pattern oluşturarak. `Management>Index Patterns >Create Index` diyerek yeni bir index pattern oluşturduktan sonra `Visualize` sekmesinden kendinize göre analizler yapabilirsiniz. Örnek analizler:
+Belirli bir süre geçtikten sonra verileri Elasticsearch içinde indekslemiş olacak. Yeni bir index pattern oluşturarak. `Management>Index Patterns >Create Index` diyerek yeni bir index pattern oluşturduktan sonra `Visualize` sekmesinden kendinize göre analizler yapabilirsiniz. Örnek analizler:  
+
 ![Physical Layer](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/physicalLayerPacketSize.png)  
-![Pie](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/pieFrameType.png) 
-![DataRate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/dataRate.png) 
+
+![Pie](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/pieFrameType.png)  
+
+![DataRate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/dataRate.png)  
+
 
 
 
