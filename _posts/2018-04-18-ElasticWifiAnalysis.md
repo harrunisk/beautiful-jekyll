@@ -67,7 +67,7 @@ name: test
 output.logstash:
   hosts: ["localhost:5044"]
 ~~~
-İndirme linki [filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/filebeat.yml)
+İndirme linki [filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/filebeat.yml)  
 `var.paths: ["/home/tshark.csv"]` dosyamızın yolu kendinize göre değiştirin.  
 filebeat.yml dosyasına linux sistemler için aşağıdaki yol ile ulaşabilirsiniz:
 ~~~
