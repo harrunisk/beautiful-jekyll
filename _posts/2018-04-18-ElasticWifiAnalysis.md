@@ -29,6 +29,13 @@ wlan.fc.type filtresinden gelecek değerler 0, 1, ya da 2 olacak. Bu değerlerin
 | wlan.fc.type==1      | Kontrol Çerçevesi      |   
 | wlan.fc.type==1 | Veri Çerçevesi      |     
 
+| Değer        | Sonuç           |   
+| ------------- |:-------------:| -----:|   
+| wlan.fc.type==0      | Yönetim Çerçevesi |   
+| wlan.fc.type==1      | Kontrol Çerçevesi      |   
+| wlan.fc.type==1 | Veri Çerçevesi      |     
+
+
 
 
 
