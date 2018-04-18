@@ -161,7 +161,9 @@ Aşağıdaki filtre ile çerçevelerin matematiksel karşılıklarını anlamlı
    mutate {
      replace => [ "frame.type", "Data" ]
    }}
-~~~
+~~~  
+  
+Filebeat.yml dosyasının son hali şu şekilde olmalı: [Filebeat.yml](https://raw.githubusercontent.com/harrunisk/WifiPacketAnalysis/master/logstash.conf).
 
 
 
