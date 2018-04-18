@@ -11,5 +11,7 @@ Kullanacağım araçlar Tshark, ElasticSearch ,Kibana, Logstash ve Filebeat olac
 kurulumu için bu link. Ya da docker kullanarak da halledebilirsiniz. Tshark filtreler kullanarak paketleri yakalayacak csv türünde 
 dosyaya yazacak. Filebeat dosyayı dinleyecek Logstash'e aktaracak. Logstash burada yeniden filtreleme yapacak ve
 Elasticsearch'e aktaracak. Kibana kullanarak analizlerimi yapacağım.
-Mimarimiz aşağıdaki şekilde olacak:
+Mimarimiz aşağıdaki şekilde olacak:  
+![Architecture](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/ArchitectureBlog.png)
+
 
