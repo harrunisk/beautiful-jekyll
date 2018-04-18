@@ -14,7 +14,7 @@ Elasticsearch'e aktaracak. Kibana kullanarak analizlerimi yapacağım.
 Mimarimiz aşağıdaki şekilde olacak:  
 ![Architecture](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/ArchitectureBlog.png)  
 Wifi paketlerinin analizde kullanacağım filtreler:  
-| Filtre                  | Açıklama          |
+|   Fİltre                |   Açıklama        
 | -------------           |:-------------:    |
 | wlan.fc.type            | Çerçeve Türü      |
 | wlan.fc.type_subtype    | Çerçeve Alt Türü  |
