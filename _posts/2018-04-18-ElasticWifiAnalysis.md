@@ -31,7 +31,15 @@ wlan.fc.type filtresinden gelecek değerler 0, 1, ya da 2 olacak. Bu değerlerin
 | ------------- |:-------------:| -----:|   
 | wlan.fc.type==0      | Yönetim Çerçevesi |   
 | wlan.fc.type==1      | Kontrol Çerçevesi      |   
-| wlan.fc.type==1 | Veri Çerçevesi      |     
+| wlan.fc.type==2 | Veri Çerçevesi      |    
+
+wlan.fc.subtype filtresinden gelecek değerler 0 ile 47 arasında değişecek bunlardan bazıları aşağıdaki tabloda kapsamlı olarak [buradan](https://dalewifisec.wordpress.com/2014/04/29/wireshark-802-11-display-filters-2/) ulaşabilirsiniz.  
+
+| Değer        | Sonuç           |   
+| ------------- |:-------------:| -----:|   
+| wlan.fc.type_subtype==8      | Beacon |   
+| wlan.fc.type_subtype==27      | Request To Send      |   
+| wlan.fc.type_subtype==28 | Clear To Send      |
 
 
 
