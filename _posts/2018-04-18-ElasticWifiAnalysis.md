@@ -24,6 +24,12 @@ Wifi paketlerinin analizde kullanacağım filtreler:
 | radiotap.datarate | Veri Akış Hızı      |   
 
 
+wlan.fc.type filtresinden gelecek değerler 0, 1, ya da 2 olacak. Bu değerlerin karşılığı:    
+| wlan.fc.type==0      | Yönetim Çerçevesi |   
+| wlan.fc.type==1      | Kontrol Çerçevesi      |   
+| wlan.fc.type==1 | Veri Çerçevesi      |     
+
+
 
 
 
