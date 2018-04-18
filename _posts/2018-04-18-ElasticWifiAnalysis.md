@@ -178,18 +178,22 @@ sudo systemctl start elasticsearch.service kibana.service logstash.service fileb
 
 Belirli bir süre geçtikten sonra verileri Elasticsearch içinde indekslemiş olacak. Yeni bir index pattern oluşturarak. `Management>Index Patterns >Create Index` diyerek yeni bir index pattern oluşturduktan sonra `Visualize` sekmesinden kendinize göre analizler yapabilirsiniz. Örnek analizler:  
 
-![Physical Layer](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/physicalLayerPacketSize.png)  
+![Physical Layer](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/physicalLayerPacketSize.png)    
 
-![Pie](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/pieFrameType.png)  
+![Pie](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/pieFrameType.png) 
 
 ![DataRate](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/dataRate.png) 
 
   
   ### Kaynaklar
-  [https://rudibroekhuizen.wordpress.com/2016/02/12/analyse-tshark-capture-in-kibana/](https://rudibroekhuizen.wordpress.com/2016/02/12/analyse-tshark-capture-in-kibana/)
-[Tshark komutları](https://www.wireshark.org/docs/man-pages/tshark.html)
-[Wlan filtreleri](https://www.wireshark.org/docs/dfref/w/wlan.html)
-[http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html](http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html)
+  [https://rudibroekhuizen.wordpress.com/2016/02/12/analyse-tshark-capture-in-kibana/](https://rudibroekhuizen.wordpress.com/2016/02/12/analyse-tshark-capture-in-kibana/)  
+  
+[Tshark komutları](https://www.wireshark.org/docs/man-pages/tshark.html)  
+
+[Wlan filtreleri](https://www.wireshark.org/docs/dfref/w/wlan.html)  
+
+[http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html](http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html)  
+
 [https://dalewifisec.wordpress.com/2014/04/29/wireshark-802-11-display-filters-2/](https://dalewifisec.wordpress.com/2014/04/29/wireshark-802-11-display-filters-2/)
 
 
