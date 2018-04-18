@@ -42,7 +42,7 @@ wlan.fc.subtype filtresinden gelecek değerler 0 ile 47 arasında değişecek bu
 | wlan.fc.type_subtype==28 | Clear To Send      |
 
 
-## Paket Yakalama ve Dosyaya Yazma  
+## 1.Paket Yakalama ve Dosyaya Yazma  
 Kullanacağım filtre:
 ~~~
 tshark -a duration:600 -i phy0.mon -t ad -t ad -lT fields -E separator=, -E quote=d   -e _ws.col.Time  -e wlan.fc.type -e wlan.fc.type_subtype -e radiotap.dbm_antsignal -e frame.len -e radiotap.datarate	 > tshark.csv
@@ -50,8 +50,10 @@ tshark -a duration:600 -i phy0.mon -t ad -t ad -lT fields -E separator=, -E quot
 `-a duration:600`  10 dakika boyunca paket yakalayacağımı belirtiyorum.  
 `-i phy0.mon` paketleri yakalayacak arayüzümü seçiyorum sizde farklılık gösterebilir.  
 `-t ad` burada zamanın nasıl yazdırılacağını belirtiyorum. YYYY-MM-DD formatında.  
-` > tshark.csv` yakalanan paketlerin yazılacağı dosya otomatik oluşturuyor.  
-Kalan alanlar kullanılan filtrelerin ne şekilde ayrılacağı ile ilgili.
+`> tshark.csv` yakalanan paketlerin yazılacağı dosya otomatik oluşturuyor.  
+Kalan alanlar kullanılan filtrelerin ne şekilde ayrılacağı ile ilgili.  
+
+## 2.Yakalan Paketlerin Filebeat İle Dinlenmesi
 
 
 
