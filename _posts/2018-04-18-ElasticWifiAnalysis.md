@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Elasticsearch'de Wifi Paket Analizi 
+title: Elasticsearch'de Wireless Paket Analizi 
 subtitle: Tshark Logstash Filebeat Kibana Elasticsearch
 ---
 
