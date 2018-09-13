@@ -4,7 +4,7 @@ title: Wireless Packet Analysis on Elasticsearch
 subtitle: Tshark Logstash Filebeat Kibana Elasticsearch
 ---
 
-We can say that Wireshark is a graphical version of Tshark. Aim of this article is to analyze some attributes of  wireless packets captured using tshark on Elasticsearch. Tshark, Elasticsearch, Kibana, Logstash and Filebeat are used to analyze.. Installation of Elasticsearch, Kibana, Logstash and Filebeat can be found [on this link](https://www.elastic.co/products). An alternative solution is Docker.  
+We can say that Wireshark is a graphical version of Tshark. Aim of this article is to analyze some attributes of  wireless packets captured using tshark on Elasticsearch. Tshark, Elasticsearch, Kibana, Logstash and Filebeat are used to analyze. Installation of Elasticsearch, Kibana, Logstash and Filebeat can be found [on this link](https://www.elastic.co/products). An alternative solution is Docker.  
 In a nutshell:  
 1.Tshark captures wireless packets by using filters.  
 2.Tshark writes captured wireless packets as .csv.  
@@ -175,12 +175,14 @@ In brief, after we have configured our tools we start to capture wireless packet
 tshark -a duration:600 -i phy0.mon -t ad -t ad -lT fields -E separator=, -E quote=d   -e _ws.col.Time  -e wlan.fc.type -e wlan.fc.type_subtype -e radiotap.dbm_antsignal -e frame.len -e radiotap.datarate	 > tshark.csv
 ~~~
 We start Elasticsearch, Kibana, Logstash and Filebeat.    
-Readily for linux systems :
+For linux systems :
 ~~~
 sudo systemctl start elasticsearch.service kibana.service logstash.service filebeat.service  
 ~~~
 
-Data will be indexed in Elasticsearch after while a time. Create a new index pattern as the following   `Management>Index Patterns >Create Index` afterthat we can analyze data from   `Visualize` tab. Examples:  
+Data will be indexed in Elasticsearch after while a time. We can create a new index pattern as the following:     `Management>Index Patterns >Create Index`  
+Now we can analyze data from   `Visualize` tab.  
+Examples:  
 
 ![Physical Layer](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/physicalLayerPacketSize.png)    
 
@@ -201,5 +203,3 @@ Data will be indexed in Elasticsearch after while a time. Create a new index pat
 [http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html](http://www.lovemytool.com/blog/2010/02/wireshark-wireless-display-and-capture-filters-samples-by-joke-snelders.html)  
 
 [https://dalewifisec.wordpress.com/2014/04/29/wireshark-802-11-display-filters-2/](https://dalewifisec.wordpress.com/2014/04/29/wireshark-802-11-display-filters-2/)  
-  
-  
