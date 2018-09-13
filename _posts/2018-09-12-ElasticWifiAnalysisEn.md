@@ -6,11 +6,11 @@ subtitle: Tshark Logstash Filebeat Kibana Elasticsearch
 
 We can say that Wireshark is a graphical version of Tshark. Aim of this article is to analyze some attributes of  wireless packets captured using tshark on Elasticsearch. Tshark, Elasticsearch, Kibana, Logstash and Filebeat are used to analyze. Installation of Elasticsearch, Kibana, Logstash and Filebeat can be found [on this link](https://www.elastic.co/products). An alternative solution is Docker.  
 In a nutshell:  
-1.Tshark captures wireless packets by using filters.  
-2.Tshark writes captured wireless packets as .csv.  
-3.Filebeat listens .csv file sends to Logstash.  
-4.Logstash filters data again and sends to Elasticsearch.   
-5.Analyze data by using Kibana. Dashboard, graph etc.  
+1. Tshark captures wireless packets by using filters.  
+2. Tshark writes captured wireless packets as .csv.  
+3. Filebeat listens .csv file sends to Logstash.  
+4. Logstash filters data again and sends to Elasticsearch.   
+5. Analyze data by using Kibana. Dashboard, graph etc.  
   
 System architecture as the following:  
 ![Architecture](https://raw.githubusercontent.com/harrunisk/harrunisk.github.io/master/img/ArchitectureBlog.png)  
