@@ -4,7 +4,6 @@ title: Hakkımda
 subtitle: 
 ---
 
-Sakarya Üniversitesi Bilgisayar Mühendisliği son sınıf öğrencisiyim. Yaptığım öğrendiğim şeyleri derli toplu bir yerde barındırmak ve paylaşabilmek için vakit bulabildikçe buraya eklemeye çalışıyorum. Sporun her türlüsünü seviyorum hepsinden azar azar yapmaya çalışıyorum.
+A young & enthusiastic mobile application developer.
 
-harrunisk@gmail.com
 
